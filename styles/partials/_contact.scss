@@ -1,0 +1,58 @@
+.contact {
+    .wrapper {
+        flex-direction: column;
+    }
+    h3, h4 {
+        width: 100%;
+        text-align: center;
+    }
+    h3 {
+        @include font-size(50);
+        text-transform: uppercase;
+        padding: 10px;
+    }
+    h4 {
+        @include font-size(25);
+        padding: 10px;
+    }
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    .social {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        i {
+            @include font-size(50);
+            margin: 10px 0;
+        }
+    }
+    .connect {
+        width: 25%;
+    }
+    form {
+        width: 50%;
+        input, textarea, button {
+            width: 100%;
+            border: none;
+            padding: 10px;
+        }
+        button {
+            width: 50%;
+            margin: 1rem 25% 0 25%; 
+        }
+        input {
+            
+        }
+        input[type=email] {
+            margin: 1rem 0;
+        }
+        textarea {
+            resize: none;
+        }
+    }
+}

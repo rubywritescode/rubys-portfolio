@@ -1,0 +1,26 @@
+html {
+    font-size: 125%;
+    color: white;
+}
+
+body {
+    background-color: $background-color;
+    font-family: $base-font;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+    @include center-center;
+}
+
+h1, h2, h3, h4, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}

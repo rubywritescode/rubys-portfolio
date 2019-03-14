@@ -1,0 +1,51 @@
+.home {
+    // height: 100vh;
+    display: flex;
+    position: relative;
+    .wrapper {
+        
+    }
+    .home-text-container, .home-image-container {
+        width: 50%;
+    }
+    .home-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // height: 100%;
+        div {
+            margin: 100px 0;
+        }
+    }
+    .home-image-container {
+        width: 50%;
+        img {
+            margin: 100px 0;
+        }
+    }
+    p {
+        color: $turquoise;
+        span {
+            text-transform: uppercase;
+            color: $orange;
+        }
+    }
+    h1 {
+        color: $yellow;
+        span {
+            color: $purple;
+        }
+    }
+    h2 {
+        color: $turquoise;
+        span {
+            color: $orange;
+        }
+    }
+    h3 {
+        color: $turquoise;
+        span {
+            color: $orange;
+        }
+    }
+}
