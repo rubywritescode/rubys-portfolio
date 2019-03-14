@@ -211,17 +211,20 @@ img {
 
 header {
   color: #fff;
-  z-index: 10;
-  position: relative;
+  height: 70px;
+  z-index: 20;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 2s ease all;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  margin: 0 10%;
 }
 header p {
   width: 50px;
@@ -229,6 +232,10 @@ header p {
   padding: 12px 10px;
   border: 1px solid #fff;
   margin: 10px 0;
+}
+
+header:hover {
+  background-color: #db5b44;
 }
 
 .home {
@@ -242,6 +249,7 @@ header p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 10px;
 }
 .home .home-text-container div {
   margin: 100px 0;
@@ -250,7 +258,15 @@ header p {
   width: 50%;
 }
 .home .home-image-container img {
-  margin: 100px 0;
+  margin: 80px 0;
+}
+.home .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(to bottom right, transparent 60%, rgba(219, 119, 220, 0.4) 40%), linear-gradient(to top right, transparent 70%, rgba(16, 208, 183, 0.5) 70%);
 }
 .home p {
   color: #10d0b7;
@@ -289,6 +305,9 @@ header p {
   display: flex;
 }
 
+.contact {
+  padding: 80px 0;
+}
 .contact .wrapper {
   flex-direction: column;
 }
@@ -301,11 +320,16 @@ header p {
   font-size: 2.5rem;
   text-transform: uppercase;
   padding: 10px;
+  color: #10d0b7;
+}
+.contact h3 span {
+  color: #db5b44;
 }
 .contact h4 {
   font-size: 25px;
   font-size: 1.25rem;
   padding: 10px;
+  color: #10d0b7;
 }
 .contact .form-container {
   display: flex;
@@ -318,26 +342,37 @@ header p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  color: #d8e577;
 }
 .contact .social i {
   font-size: 50px;
   font-size: 2.5rem;
-  margin: 10px 0;
+  margin: 20px 0;
+  color: #db77dc;
 }
 .contact .connect {
   width: 25%;
+  color: #d8e577;
 }
 .contact form {
   width: 50%;
 }
 .contact form input, .contact form textarea, .contact form button {
   width: 100%;
-  border: none;
   padding: 10px;
+  border: 2px solid #10d0b7;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  color: #fff;
+  opacity: 1;
 }
 .contact form button {
   width: 50%;
-  margin: 1rem 25% 0 25%;
+  margin: 1rem 0 0 0;
+  background-color: #10d0b7;
+  border: 2px solid #10d0b7;
 }
 .contact form input[type=email] {
   margin: 1rem 0;
@@ -347,10 +382,9 @@ header p {
 }
 
 footer {
-  background-color: #10d0b7;
+  background-color: #db5b44;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

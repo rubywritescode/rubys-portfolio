@@ -1,4 +1,5 @@
 .contact {
+    padding: 80px 0;
     .wrapper {
         flex-direction: column;
     }
@@ -10,10 +11,15 @@
         @include font-size(50);
         text-transform: uppercase;
         padding: 10px;
+        color: $turquoise;
+        span {
+            color: $orange;
+        }
     }
     h4 {
         @include font-size(25);
         padding: 10px;
+        color: $turquoise;
     }
     .form-container {
         display: flex;
@@ -26,27 +32,35 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        color: $yellow;
         i {
             @include font-size(50);
-            margin: 10px 0;
+            margin: 20px 0;
+            color: $purple;
         }
     }
     .connect {
         width: 25%;
+        color: $yellow;
     }
     form {
         width: 50%;
         input, textarea, button {
             width: 100%;
-            border: none;
             padding: 10px;
+            border: 2px solid $turquoise;
+            background-color: $background-color;
+            color: #fff;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #fff;
+            opacity: 1;
         }
         button {
             width: 50%;
-            margin: 1rem 25% 0 25%; 
-        }
-        input {
-            
+            margin: 1rem 0 0 0; 
+            background-color: $turquoise;
+            border: 2px solid $turquoise;
         }
         input[type=email] {
             margin: 1rem 0;
