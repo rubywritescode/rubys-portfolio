@@ -199,7 +199,7 @@ body {
   align-items: center;
 }
 
-h1, h2, h3, h4, ul, li, p {
+h1, h2, h3, h4, h5, ul, li, p {
   margin: 0;
   padding: 0;
 }
@@ -377,8 +377,35 @@ header:hover {
   text-align: center;
   padding: 10px;
 }
+.work h5 {
+  font-size: 22px;
+  font-size: 1.1rem;
+}
 .work .project {
   display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: solid 2px #fff;
+}
+.work .project-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.work .project-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 10%;
+}
+.work .project-buttons button {
+  padding: 2rem 1rem;
+}
+.work .project-image {
+  width: 30%;
 }
 
 .contact {
