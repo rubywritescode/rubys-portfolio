@@ -258,6 +258,7 @@ header:hover {
   width: 50%;
 }
 .home .home-image-container img {
+  width: 90%;
   margin: 80px 0;
 }
 .home .overlay {
@@ -266,7 +267,7 @@ header:hover {
   right: 0;
   bottom: 0;
   left: 50%;
-  background: linear-gradient(to bottom right, transparent 60%, rgba(219, 119, 220, 0.4) 40%), linear-gradient(to top right, transparent 70%, rgba(16, 208, 183, 0.5) 70%);
+  background: linear-gradient(to bottom right, transparent 60%, rgba(219, 119, 220, 0.2) 40%), linear-gradient(to top right, transparent 70%, rgba(16, 208, 183, 0.4) 70%), linear-gradient(to bottom, transparent 70%, #d8e577 70%, #d8e577 80%, transparent 80%, transparent 100%);
 }
 .home p {
   color: #10d0b7;
@@ -294,13 +295,88 @@ header:hover {
   color: #db5b44;
 }
 
+.about {
+  padding: 80px 0;
+}
 .about .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.about .wrapper h3 {
+  font-size: 50px;
+  font-size: 2.5rem;
+  color: #10d0b7;
+  padding: 10px;
+}
+.about .wrapper h3 span {
+  color: #db5b44;
+  text-transform: uppercase;
+}
+.about .wrapper h4 {
+  font-size: 25px;
+  font-size: 1.25rem;
+  color: #10d0b7;
+  text-align: center;
+  padding: 10px;
+}
+.about .bio {
+  width: 50%;
+  min-width: 400px;
+  padding: 1rem 0 10px 0;
+}
+.about button {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #db5b44;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: 0.8s all ease;
+}
+.about button:hover {
+  background-color: #d8e577;
+  color: #2a2a2a;
+}
+.about .skill-icons {
+  color: #db77dc;
+  width: 80%;
+  margin: 1rem 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 50px;
+  font-size: 2.5rem;
+  transition: 0.5s all ease;
+}
+.about .skill-icons i:hover {
+  color: #d8e577;
+}
 
+.work {
+  padding: 80px 0;
+}
+.work .wrapper {
+  flex-direction: column;
+}
+.work h3 {
+  font-size: 50px;
+  font-size: 2.5rem;
+  color: #10d0b7;
+  padding: 10px;
+}
+.work h3 span {
+  color: #db5b44;
+  text-transform: uppercase;
+}
+.work h4 {
+  font-size: 25px;
+  font-size: 1.25rem;
+  color: #10d0b7;
+  text-align: center;
+  padding: 10px;
+}
 .work .project {
   display: flex;
 }
