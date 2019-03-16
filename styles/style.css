@@ -267,10 +267,11 @@ header:hover {
   right: 0;
   bottom: 0;
   left: 50%;
-  background: linear-gradient(to bottom right, transparent 60%, rgba(219, 119, 220, 0.2) 40%), linear-gradient(to top right, transparent 70%, rgba(16, 208, 183, 0.4) 70%), linear-gradient(to bottom, transparent 70%, #d8e577 70%, #d8e577 80%, transparent 80%, transparent 100%);
+  background: linear-gradient(-200deg, transparent 60%, rgba(219, 119, 220, 0.2) 40%), linear-gradient(70deg, transparent 60%, rgba(16, 208, 183, 0.4) 40%), linear-gradient(to bottom, transparent 75%, #d8e577 75%, #d8e577 90%, transparent 90%, transparent 100%), linear-gradient(to top left, transparent 25%, #db5b44 25%, #db5b44 45%, transparent 45%);
 }
 .home p {
   color: #10d0b7;
+  padding: 0.5rem 0;
 }
 .home p span {
   text-transform: uppercase;
@@ -278,9 +279,12 @@ header:hover {
 }
 .home h1 {
   color: #d8e577;
+  padding: 1rem 0;
 }
 .home h1 span {
   color: #db77dc;
+  font-size: 50px;
+  font-size: 2.5rem;
 }
 .home h2 {
   color: #10d0b7;
@@ -378,21 +382,30 @@ header:hover {
   padding: 10px;
 }
 .work h5 {
-  font-size: 22px;
-  font-size: 1.1rem;
+  font-size: 25px;
+  font-size: 1.25rem;
+  color: #db77dc;
 }
 .work .project {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 2rem 0;
   padding: 1rem;
-  border: solid 2px #fff;
 }
 .work .project-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.work .project-text p {
+  line-height: 1.6;
+}
+.work .project-text span.italic {
+  font-style: italic;
+}
+.work .project-text .skills {
+  color: #db5b44;
 }
 .work .project-buttons {
   display: flex;
@@ -401,13 +414,34 @@ header:hover {
   flex-direction: column;
   width: 10%;
 }
-.work .project-buttons button {
-  padding: 2rem 1rem;
+.work .project-buttons a {
+  padding: 1.5rem 1rem;
+  background-color: #10d0b7;
+  color: #2a2a2a;
+  border: 2px solid #10d0b7;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transform: all 0.5s ease;
+}
+.work .project-buttons a:hover {
+  border: 2px solid #10d0b7;
+  background-color: #2a2a2a;
+  color: #10d0b7;
 }
 .work .project-image {
-  width: 30%;
+  width: 35%;
+  position: relative;
+  background-color: #d8e577;
+  overflow: hidden;
 }
-
+.work .screenshot-container {
+  position: absolute;
+  top: 29%;
+  right: 18%;
+  left: 18%;
+}
 .contact {
   padding: 80px 0;
 }

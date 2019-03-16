@@ -19,20 +19,29 @@
         padding: 10px;
     }
     h5 {
-        @include font-size(22);
+        @include font-size(25);
+        color: $purple;
     }
     .project {
         display: flex;
         justify-content: space-between;
-        margin: 1rem 0;
+        margin: 2rem 0;
         padding: 1rem;
-        border: solid 2px #fff;
     }
     .project-text {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        p {
+            line-height: 1.6;
+        }
+        span.italic {
+            font-style: italic;
+        }
+        .skills {
+            color: $orange;
+        }
     }
     .project-buttons {
         display: flex;
@@ -40,11 +49,36 @@
         align-items: center;
         flex-direction: column;
         width: 10%;
-        button {
-            padding: 2rem 1rem;
+        a {
+            padding: 1.5rem 1rem;
+            background-color: $turquoise;
+            color: $background-color;
+            border: 2px solid $turquoise;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transform: all 0.5s ease;
+        }
+        a:hover {
+            border: 2px solid $turquoise;
+            background-color: $background-color;
+            color: $turquoise;
         }
     }
     .project-image {
-        width: 30%;
+        width: 35%;
+        position: relative;
+        background-color: $yellow;
+        overflow: hidden;
+    }
+    .screenshot-container {
+        position: absolute;
+        top: 29%;
+        right: 18%;
+        left: 18%;
+        img {
+
+        }
     }
 }
