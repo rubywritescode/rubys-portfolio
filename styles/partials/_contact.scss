@@ -33,24 +33,50 @@
         justify-content: flex-start;
         align-items: center;
         color: $yellow;
+        text-decoration: underline;
         i {
             @include font-size(50);
-            margin: 20px 0;
+            margin: 1rem 0;
             color: $purple;
+        }
+        a:hover i, a:focus i {
+            color: $turquoise;
         }
     }
     .connect {
         width: 25%;
         color: $yellow;
+        display: flex;
+        flex-direction: column;
+        p.connect {
+            margin: 0;
+            text-decoration: underline;
+        }
+        p a {
+            margin: 1.5rem 0;
+            display: block;
+            color: $orange;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+
     }
     form {
         width: 50%;
         input, textarea, button {
             width: 100%;
             padding: 10px;
-            border: 2px solid $turquoise;
+            border: 2px solid $yellow;
             background-color: $background-color;
             color: #fff;
+        }
+        input:focus, textarea:focus {
+            border: 2px solid $orange;
         }
         input::placeholder, textarea::placeholder {
             color: #fff;
@@ -61,6 +87,15 @@
             margin: 1rem 0 0 0; 
             background-color: $turquoise;
             border: 2px solid $turquoise;
+            transition: all 0.5s ease;
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+        button:hover, button:focus {
+            background-color: $purple;
+            border: 2px solid $purple;
         }
         input[type=email] {
             margin: 1rem 0;

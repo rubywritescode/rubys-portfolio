@@ -23,9 +23,51 @@
         <header>
             <div class="wrapper">
                 <a href="#home"><p class="initial">_rb</p></a>
-                <a href=""><p class="menu"><i class="fas fa-bars"></i></p></a>
+                <a href="#" class="open-menu">
+                    <p class="menu">
+                        <label class="visually-hidden">Link to open Navigation</label>
+                        <i class="fas fa-bars"></i>
+                    </p>
+                </a>
             </div>
         </header>
+        <nav>
+            <div class="wrapper">
+                <a href="#" class="close-menu">
+                    <p class="menu">
+                        <label class="visually-hidden">Link to close Navigation</label>
+                        <i class="fas fa-times"></i>
+                    </p>
+                </a>
+                <h2>{ <span>Ruby Bantock</span> } </h2>
+                <ul>
+                    <a href="#home" class="nav-home">
+                        <li>&lt;li&gt; <span>Home</span> &lt;/li&gt;</li>
+                    </a>
+                    <a href="#about" class="nav-about">
+                        <li>&lt;li&gt; <span>About Me</span> &lt;/li&gt;</li>
+                    </a>
+                    <a href="#work" class="nav-work">
+                        <li>&lt;li&gt;<span> My Work</span> &lt;/li&gt;</li>
+                    </a>
+                    <a href="#contact" class="nav-contact">
+                        <li>&lt;li&gt; <span>Contact Me</span> &lt;/li&gt;</li>
+                    </a>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://twitter.com/rubywritescode">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ruby-bantock-b8a57a17/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/banruby">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </div>
+                <p class="copyright">© Ruby Bantock | 2019</p>
+            </div>
+        </nav>
         <main>
             <section class="home" id="home">
                 <div class="wrapper">
@@ -43,7 +85,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="wrapper">
                     <h3>{ <span>About Me</span> }</h3>
                     <h4>I'm a Front-End Web Developer based in Toronto, Canada.</h4>
@@ -59,19 +101,56 @@
                     nothing. Or pixels! <span>&lt;/p&gt;</span></p>
                     <button>Download Resume</button>
                     <div class="skill-icons">
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-css3-alt"></i>
-                        <i class="fab fa-sass"></i>
-                        <i class="fab fa-js"></i>
-                        <i class="devicon-jquery-plain-wordmark"></i>
-                        <i class="fab fa-react"></i>
-                        <i class="fab fa-git-square"></i>
-                        <i class="fab fa-github"></i>
-                        <i class="devicon-visualstudio-plain"></i>
+                        <div class="skill-container">
+                            <i class="fab fa-html5" aria-hidden="true">
+                            </i>
+                            <span class="icon-description">HTML5</span>
+                            <span class="sr-only">H.T.M.L. 5</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                            <span class="icon-description">CSS3</span>
+                            <span class="sr-only">C.S.S. 3</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-sass" aria-hidden="true"></i>
+                            <span class="icon-description">SASS</span>
+                            <span class="sr-only">Sass</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-js" aria-hidden="true"></i>
+                            <span class="icon-description">JavaScript</span>
+                            <span class="sr-only">JavaScript</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-jquery-plain-wordmark" aria-hidden="true"></i>
+                            <span class="icon-description">JQuery</span>
+                            <span class="sr-only">JQuery</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-react" aria-hidden="true"></i>
+                            <span class="icon-description">React</span>
+                            <span class="sr-only">React</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-git-square" aria-hidden="true"></i>
+                            <span class="icon-description">Git</span>
+                            <span class="sr-only">Git</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span class="icon-description">GitHub</span>
+                            <span class="sr-only">Git Hub</span>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-visualstudio-plain" aria-hidden="true"></i>
+                            <span class="icon-description">VS Code</span>
+                            <span class="sr-only">V.S. Code</span>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="work">
+            <section class="work" id="work">
                 <div class="wrapper">
                     <h3>{ <span>My Work</span> }</h3>
                     <h4>Check it out!</h4>
@@ -172,27 +251,39 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="wrapper">
                     <h3>{ <span>Contact Me</span> }</h3>
                     <h4>Get in touch!</h4>
                     <div class="form-container">
                         <form action="submit">
-                            <input type="text" placeholder="_name">
-                            <input type="email" placeholder="_email">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="_message"></textarea>
-                            <button type="submit">_send</button>
+                            <input type="text" name="name" placeholder="_name">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input type="email" name="email" placeholder="_email">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="_message"></textarea>
+                            <label for="message" class="visually-hidden">Message</label>
+                            <button type="submit"><a href="#">_send</a>
+                            </button>
                         </form>
                         <div class="social">
                             <p>Social</p>
-                            <i class="fab fa-twitter-square"></i>
-                            <i class="fab fa-linkedin"></i>
-                            <i class="fab fa-github-square"></i>
+                            <a href="https://twitter.com/rubywritescode"><i class="fab fa-twitter-square"></i>
+                            <span class="sr-only">Link to Ruby's Twitter</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ruby-bantock-b8a57a17/">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="sr-only">Link to Ruby's LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/banruby">
+                                <i class="fab fa-github-square"></i>
+                                <span class="sr-only">Link to Ruby's GitHub</span>
+                            </a>
                         </div>
                         <div class="connect">
-                            <p>Connect</p>
-                            <p><a href="emailto:">ruby@rubybantock.com</a></p>
-                            <p>www.rubybantock.com</p>
+                            <p class="connect">Connect</p>
+                            <p><a href="mailto:ruby@rubybantock.com">ruby@rubybantock.com</a></p>
+                            <p><a href="https://rubybantock.com">www.rubybantock.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -204,5 +295,8 @@
 
         <!-- JQUERY -->
         <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
+        <!-- SCRIPTS -->
+        <script src="scripts/scripts.js"></script>
     </body>
 </html>

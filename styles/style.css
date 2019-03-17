@@ -167,7 +167,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
-.visuallyhidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -216,6 +216,10 @@ h3 {
 
 h4 {
   margin: 0.5rem 0;
+}
+
+a:focus, a:active {
+  outline: none;
 }
 
 header {
@@ -298,7 +302,6 @@ header:hover {
 }
 .home p {
   color: #10d0b7;
-  padding: 0.5rem 0;
 }
 .home p span {
   text-transform: uppercase;
@@ -315,6 +318,7 @@ header:hover {
 }
 .home h2 {
   color: #10d0b7;
+  padding: 1rem 0;
 }
 .home h2 span {
   color: #db5b44;
@@ -324,6 +328,88 @@ header:hover {
 }
 .home h3 span {
   color: #db5b44;
+}
+
+nav {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(42, 42, 42, 0.95);
+}
+nav .wrapper {
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+nav .wrapper a {
+  color: #fff;
+  text-decoration: none;
+}
+nav .wrapper a:hover span, nav .wrapper a:focus span {
+  color: #d8e577;
+}
+nav h2 {
+  font-size: 50px;
+  font-size: 2.5rem;
+  color: #db5b44;
+}
+nav h2 span {
+  color: #db77dc;
+}
+nav ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem 0;
+}
+nav li {
+  display: inline;
+  font-size: 22px;
+  font-size: 1.1rem;
+  color: #10d0b7;
+}
+nav li span {
+  color: #fff;
+}
+nav p.menu {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  font-size: 2rem;
+  border: 1px solid #fff;
+  padding: 5px 10.25px;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+nav a:hover p.menu, nav a:focus p.menu {
+  background-color: #db77dc;
+  color: #10d0b7;
+  border: 1px solid #d8e577;
+}
+nav .social-icons {
+  font-size: 35px;
+  font-size: 1.75rem;
+}
+nav .social-icons a {
+  color: #db5b44;
+  text-decoration: none;
+  margin: 0 1rem;
+  text-align: center;
+}
+nav .social-icons a:hover, nav .social-icons a:focus {
+  color: #10d0b7;
+}
+nav .copyright {
+  color: #d8e577;
+  margin: 2rem;
 }
 
 .about {
@@ -377,17 +463,39 @@ header:hover {
 }
 .about .skill-icons {
   color: #db77dc;
-  width: 80%;
   margin: 1rem 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 50px;
-  font-size: 2.5rem;
+  font-size: 60px;
+  font-size: 3rem;
   transition: 0.5s all ease;
+}
+.about .skill-icons .skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
 }
 .about .skill-icons i:hover {
   color: #d8e577;
+}
+.about .skill-icons span {
+  color: #db77dc;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  font-size: 20px;
+  font-size: 1rem;
+}
+
+.icon-description {
+  display: none;
+}
+
+.icon-display {
+  display: block;
 }
 
 .work {
@@ -457,7 +565,7 @@ header:hover {
   font-size: 0.9rem;
   transform: all 0.5s ease;
 }
-.work .project-buttons a:hover {
+.work .project-buttons a:hover, .work .project-buttons a:focus {
   border: 2px solid #10d0b7;
   background-color: #2a2a2a;
   color: #10d0b7;
@@ -512,16 +620,38 @@ header:hover {
   justify-content: flex-start;
   align-items: center;
   color: #d8e577;
+  text-decoration: underline;
 }
 .contact .social i {
   font-size: 50px;
   font-size: 2.5rem;
-  margin: 20px 0;
+  margin: 1rem 0;
   color: #db77dc;
+}
+.contact .social a:hover i, .contact .social a:focus i {
+  color: #10d0b7;
 }
 .contact .connect {
   width: 25%;
   color: #d8e577;
+  display: flex;
+  flex-direction: column;
+}
+.contact .connect p.connect {
+  margin: 0;
+  text-decoration: underline;
+}
+.contact .connect p a {
+  margin: 1.5rem 0;
+  display: block;
+  color: #db5b44;
+  text-decoration: none;
+}
+.contact .connect p a:hover {
+  text-decoration: underline;
+}
+.contact .connect p a:focus {
+  text-decoration: underline;
 }
 .contact form {
   width: 50%;
@@ -529,9 +659,12 @@ header:hover {
 .contact form input, .contact form textarea, .contact form button {
   width: 100%;
   padding: 10px;
-  border: 2px solid #10d0b7;
+  border: 2px solid #d8e577;
   background-color: #2a2a2a;
   color: #fff;
+}
+.contact form input:focus, .contact form textarea:focus {
+  border: 2px solid #db5b44;
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   color: #fff;
@@ -542,6 +675,15 @@ header:hover {
   margin: 1rem 0 0 0;
   background-color: #10d0b7;
   border: 2px solid #10d0b7;
+  transition: all 0.5s ease;
+}
+.contact form button a {
+  text-decoration: none;
+  color: #fff;
+}
+.contact form button:hover, .contact form button:focus {
+  background-color: #db77dc;
+  border: 2px solid #db77dc;
 }
 .contact form input[type=email] {
   margin: 1rem 0;

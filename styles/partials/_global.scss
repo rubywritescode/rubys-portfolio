@@ -33,3 +33,7 @@ h3 {
 h4 {
     margin: 0.5rem 0;
 }
+
+a:focus, a:active {
+    outline: none;
+}
