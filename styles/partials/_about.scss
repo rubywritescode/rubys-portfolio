@@ -22,12 +22,17 @@
         }
     }
     .bio {
-        width: 50%;
+        width: 55%;
         min-width: 400px;
         padding: 1rem 0 10px 0;
+        line-height: 1.8;
+        font-size: 0.9rem;
+        span {
+            color: $purple;
+        }
     }
     button {
-        margin: 2rem 0;
+        margin: 4rem 0;
         padding: 1rem;
         background-color: $orange;
         border: none;
