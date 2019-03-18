@@ -547,6 +547,15 @@ nav .copyright {
 .work .project-text .skills {
   color: #db5b44;
 }
+.work .project-text a {
+  color: #fff;
+}
+.work .project-text a:hover {
+  color: #d8e577;
+}
+.work .project-text a:focus {
+  color: #d8e577;
+}
 .work .project-buttons {
   display: flex;
   justify-content: space-around;

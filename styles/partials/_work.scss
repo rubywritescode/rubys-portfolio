@@ -42,6 +42,15 @@
         .skills {
             color: $orange;
         }
+        a {
+            color: #fff;
+            &:hover {
+                color: $yellow;
+            }
+            &:focus {
+                color: $yellow;
+            }
+        }
     }
     .project-buttons {
         display: flex;
