@@ -1,9 +1,9 @@
 const openMenu = () => {
-    $("nav").fadeIn(1000);
+    $("nav").fadeIn(500);
 }
 
 const closeMenu = () => {
-    $("nav").fadeOut(1000);
+    $("nav").fadeOut(500);
 }
 
 $("a.open-menu").click(function(e) {
@@ -13,6 +13,10 @@ $("a.open-menu").click(function(e) {
 
 $("a.close-menu").click(function(e) {
     e.preventDefault();
+    closeMenu();
+})
+
+$("nav").click(function(){
     closeMenu();
 })
 
@@ -33,6 +37,5 @@ $(".nav-contact").click(function(){
 })
 
 $(".skill-container").hover(function(){
-    console.log("A HOVER!")
     $(this).children(".icon-description").toggleClass("icon-display");
 })

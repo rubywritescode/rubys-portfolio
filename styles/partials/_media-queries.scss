@@ -1,0 +1,303 @@
+@media only screen and (max-width: 1450px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .work .project-text p {
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .work .project-text p {
+        @include font-size(18);
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .work .project-text p {
+        @include font-size(16);
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .wrapper {
+        width: 80%;
+    }
+    .about .bio {
+        width: 70%;
+    }
+    .work {
+        h3, h4 {
+            width: 100%;
+            text-align: center;
+        }
+        .wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .project:nth-of-type(even) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .project {
+            flex-direction: column-reverse;
+            width: 48%;
+            margin: 1rem 0;
+            padding: 0;
+            align-self: stretch;
+            justify-content: flex-end;
+            .project-image {
+                width: 100%;
+            }
+        }
+        .project-buttons {
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 1rem;
+            a {
+                display: inline-block;
+                width: 40%;
+                padding: 2rem;
+            }
+        }
+        .project-text {
+            width: 100%;
+            margin-top: 1rem;
+            flex-grow: 1;
+            p {
+                @include font-size(18);
+                line-height: 1.6;
+            }
+            p.skills {
+                margin-top: 1rem;
+            }
+        }
+        h5 {
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+    }
+    nav ul {
+       flex-direction: column;
+       justify-content: center;
+       margin: 3rem 0;
+       a {
+           margin: 1rem 0;
+       }
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .home {
+        h1 {
+            @include font-size(30);
+            padding: 0.75rem 0;
+        }
+        h2 {
+            @include font-size(25);
+        }
+    }
+    .about {
+        .skill-icons {
+            flex-wrap: wrap;
+            .skill-container {
+            width: 150px;
+            height: 100px;
+            margin-top: 10px;
+            }
+        }
+    }
+    .contact {
+        .form-container {
+            flex-wrap: wrap;
+            form {
+                width: 80%;
+                margin: 1rem 10%;
+            }
+        }
+        .social {
+            width: 50%;
+            margin-top: 1rem;
+            p {
+                width: 100%;
+                text-align: center;
+            }
+            a {
+                margin: 0 10px;
+            }
+        }
+        .connect {
+            width: 50%;
+            align-items: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .home {
+        .home-image-container {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .work {
+        .project {
+            width: 80%;
+            margin: 2rem 10%;
+        }
+        .project-buttons a {
+            width: 30%;
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .wrapper {
+        width: 90%;
+    }
+    .home {
+        .overlay {
+            background: linear-gradient(-200deg, transparent 60%, rgba(219, 119, 220, 0.2) 40%), linear-gradient(70deg, transparent 68%, rgba(16, 208, 183, 0.4) 32%), linear-gradient(to top left, transparent 25%, #d8e577 25%, #d8e577 45%, transparent 45%);
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .home {
+        .wrapper {
+            flex-direction: column;
+        }
+        .home-text-container {
+            width: 100%;
+            padding-right: 0;
+            div {
+                margin-bottom: 0;
+            }
+        }
+        .home-image-container {
+            width: 100%;
+            img {
+                margin: 1rem 12.5%;
+                width: 75%;
+            }
+        }
+        .overlay {
+            top: 430px;
+            right: 0;
+            left: 0;
+            background: linear-gradient(-200deg, transparent 60%, rgba(219, 119, 220, 0.2) 40%), linear-gradient(70deg, transparent 70%, rgba(16, 208, 183, 0.4) 30%), linear-gradient(to top left, transparent 20%, #d8e577 20%, #d8e577 40%, transparent 40%);
+        }
+    }
+    .work .project-buttons a {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .home {
+        .overlay {
+            top: 450px;
+        }
+    }
+    .about {
+        .bio {
+            width: 90%;
+            min-width: 280px;
+        }
+    }
+    .contact h3, .work h3, .about .wrapper h3 {
+        @include font-size(40);
+    }
+    .contact {
+        .social {
+            width: 30%;
+        }
+        .connect {
+            width: 70%;
+        }
+        .form-container form {
+            width: 90%;
+            margin: 1rem 5%;
+            button {
+                margin: 1rem 25% 0 25%;
+            }
+        }
+    }
+    nav h2 {
+        text-align: center;
+        @include font-size(40);
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    nav h2 {
+        @include font-size(35);
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .work {
+        .project {
+        width: 90%;
+        margin: 2rem 5%;
+        }
+        .project-buttons a {
+            width: 40%;
+            padding: 1.5rem 1rem;
+        }
+    }
+    .about {
+        .skill-icons .skill-container {
+            width: 50%;
+        }
+    }
+    .contact {
+        .social {
+            width: 100%;
+        }
+        .connect {
+            width: 100%;
+        }
+    }
+    .contact h3, .work h3, .about .wrapper h3 {
+        @include font-size(35);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .home {
+        .overlay {
+            top: 475px;
+        }
+    }
+    nav h2 {
+        @include font-size(30);
+    }
+    nav p {
+        @include font-size(16);
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .contact h3, .work h3, .about .wrapper h3 {
+        @include font-size(30);
+    }
+    .contact h4, .work h4, .about .wrapper h4 {
+        @include font-size(22);
+    }
+    .home {
+        .overlay {
+            top: 525px;
+        }
+    }
+}
