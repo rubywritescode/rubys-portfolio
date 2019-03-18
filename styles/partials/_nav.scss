@@ -21,7 +21,6 @@ nav {
     }
     h2 {
         @include font-size(50);
-        // padding: 3rem 0;
         color: $orange;
         span {
             color: $purple;
@@ -56,7 +55,6 @@ nav {
     }
     a:hover p.menu, a:focus p.menu {
         background-color: $purple;
-        color: $turquoise;
         border: 1px solid $yellow;
     }
     .social-icons {

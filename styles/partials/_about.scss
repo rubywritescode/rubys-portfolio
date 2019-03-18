@@ -39,11 +39,18 @@
         color: #fff;
         font-size: 0.9rem;
         transition: 0.8s all ease;
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.8s all ease;
+        }
     }
-    button:hover {
+    button:hover, button:focus-within {
         background-color: $yellow;
-        color: $background-color;
     }
+    button:hover a, button:focus-within a {
+        color: $background-color;
+    } 
     .skill-icons {
         color: $purple;
         margin: 1rem 10%;

@@ -64,7 +64,6 @@
                 text-decoration: underline;
             }
         }
-
     }
     form {
         width: 50%;
@@ -77,6 +76,7 @@
         }
         input:focus, textarea:focus {
             border: 2px solid $orange;
+            outline: none;
         }
         input::placeholder, textarea::placeholder {
             color: #fff;
@@ -96,6 +96,7 @@
         button:hover, button:focus {
             background-color: $purple;
             border: 2px solid $purple;
+            outline: none;
         }
         input[type=email] {
             margin: 1rem 0;
