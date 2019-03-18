@@ -233,10 +233,19 @@
             }
         }
     }
-    nav h2 {
+    nav {
+        h2 {
         text-align: center;
         @include font-size(40);
+        }
+        ul {
+            margin: 1.5rem 0;
+        }
+        ul a {
+            margin: 0.5rem 0;
+        }   
     }
+        
 }
 
 @media only screen and (max-width: 430px) {
